@@ -45,7 +45,7 @@ class WaveCommand(commands.Cog):
             sys.exit(1)
         return ret
 
-    @commands.slash_command(guild_ids=[767297341455073290], name='wave', description='provides wave info')
+    @commands.slash_command(guild_ids=[543294798430339102], name='wave', description='provides wave info')
     @discord.option('num', description='enter wave number')
     @discord.option(
         name='non_adr',

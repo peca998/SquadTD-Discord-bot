@@ -45,7 +45,7 @@ class SendCommand(commands.Cog):
             sys.exit(1)
         return ret
 
-    @commands.slash_command(guild_ids=[767297341455073290], name='send')
+    @commands.slash_command(guild_ids=[543294798430339102], name='send')
     @discord.option('name', description='enter name of the send')
     async def send(self, ctx: discord.ApplicationContext, name: str):
         if name.lower() in self.data:

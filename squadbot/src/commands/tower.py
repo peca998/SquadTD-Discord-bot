@@ -65,7 +65,7 @@ class TowerCommand(commands.Cog):
             val += f'{self.data[u].name}'
         return val
 
-    @commands.slash_command(guild_ids=[767297341455073290], name='tower')
+    @commands.slash_command(guild_ids=[543294798430339102], name='tower')
     @discord.option('name', description='enter name of the tower')
     async def tower(self, ctx: discord.ApplicationContext, name: str):
         if name.lower() in self.data:
