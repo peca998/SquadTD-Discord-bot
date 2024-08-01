@@ -78,10 +78,10 @@ class WaveCommand(commands.Cog):
         e = discord.Embed(
             color=discord.Color.blue(),
             description=f'*{ref.name}\n{ref.armor}, {ref.wpn.dmg_type}*',
-            title=f'Wave {ref.index} ({'Non-adrenaline' if non_adr else 'Adrenaline'})'
+            title=f'Wave {ref.index} ({"Non-adrenaline" if non_adr else "Adrenaline"})'
         )
         info += '__**Basic Info**__\n'
-        info += f'**Count ({'1x' if x1 else '3x'}): **{round(ref.count / 3) if x1 else ref.count}\n'
+        info += f'**Count ({"1x" if x1 else "3x"}): **{round(ref.count / 3) if x1 else ref.count}\n'
         info += f'**Bounty: **{ref.bounty} minerals\n'
         info += f'**Speed: **{ref.move_speed}\n'
         info += f'**HP: **{ref.hp if non_adr else round(ref.hp * (1+0.02*ref.index))}\n'
@@ -90,8 +90,7 @@ class WaveCommand(commands.Cog):
         if ref.energy > 0:
             info += f'**Energy: **{ref.energy}\n'
         info += '\n__**Weapon**__\n'
-        info += f'**Damage: **{ref.wpn.dmg_min if non_adr else round(ref.wpn.dmg_min *
-                               (1+0.02*ref.index))}-{ref.wpn.dmg_max if non_adr else round(ref.wpn.dmg_max*(1+0.02*ref.index))}\n'
+        info += f'**Damage: **{ref.wpn.dmg_min if non_adr else round(ref.wpn.dmg_min * (1+0.02*ref.index))}-{ref.wpn.dmg_max if non_adr else round(ref.wpn.dmg_max*(1+0.02*ref.index))}\n'
         info += f'**Attack Speed: **{ref.wpn.period if non_adr else round(ref.wpn.period/1.01**ref.index, 2)}\n'
         info += f'**Range: **{ref.wpn.wpn_range}\n'
         if len(ref.abilities) > 0:
